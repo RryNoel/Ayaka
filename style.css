@@ -1,0 +1,809 @@
+@font-face {
+    font-family: 'KOTRA_BOLD-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'KOTRA_BOLD-Bold';
+    height: 2000px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* btns Line~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.btns {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btns .container {
+    position: relative;
+    max-width: 100%;
+    min-width: 1000px;
+    height: 70px;
+    background-color: rgba(17,17,17,0.75);
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 35%);
+}
+
+.container .Logo {
+    float: left;
+    width: 300px;
+    height: 55px;
+    margin-top: 4.5px;
+    margin-left: 60px;
+}
+
+.container .btns_menu {
+    display: flex;
+    justify-content: right;
+    margin-right: 230px;
+}
+
+.btns_menu .btn {
+    font-family: 'KOTRA_BOLD-Bold';
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: transparent;
+    margin-top: 21px;
+    margin-right: 60px;
+    padding: 1px, 1px;
+}
+
+.btns_menu .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    margin-top: 30px;
+    background-color: #5ec1f3;
+  }
+
+.btns_menu .btn:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+
+
+/* summary section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1920px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+#Summary {
+    position: relative;
+    width: 100%;
+}
+
+#Summary::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img1.png);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(3.5px); 
+    -moz-filter: blur(3.5px); 
+    -o-filter: blur(3.5px); 
+    -ms-filter: blur(3.5px); 
+    filter: blur(3.5px);
+}
+
+.wrapper .Summary_area {
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.Summary_area .Crt_XP {
+    opacity: 0;
+}
+
+.Crt_img {
+    float: left;
+    width: 783px;
+    height: 805px;
+    background-image: url(img/section1_crimg.png);
+    background-size: 650px 671px;
+    background-repeat: no-repeat;
+    margin-top: 131px;
+}
+
+
+/* summary Crt_video~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.Crt_video img {
+    float: left;
+    width: 318px;
+    height: 299px;
+    margin-top: 530px;
+    cursor: pointer;
+    margin-left: -250px;
+}
+
+.Crt_video .Crt_modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s all;
+}
+
+.Crt_video .Crt_hidden {
+    display: none;
+}
+
+.Crt_modal .modal_overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Crt_modal .modal_content {
+    position: relative;
+    text-align: center;
+}
+
+.Crt_modal .modal_content button {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    margin-top: -45px;
+    margin-left: -30px;
+}
+
+
+/* summary Crt_explan~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.Crt_explan {
+    float: left;
+    font-family: 'Pretendard-Regular';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url(img/article_tools_genshin.png);
+    background-repeat: no-repeat;
+    background-position: 57px 66px;
+    color: white;
+    margin-top: 220px;
+    margin-left: 30px;
+    text-align: center;
+    transition: 0.3s all;
+    box-shadow: 0 3px 5px 0 rgba(40, 212, 255, 0.65);
+}
+
+.Crt_explan::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-image: url(img/article_tools_genshin.png);
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    margin-top: 270px;
+    opacity: 0;
+}
+
+.Crt_explan:hover {
+    transition: 0.5s all;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.Crt_explan:hover::before {
+    transition: 0.5s all;
+    opacity: 0.4;
+}
+
+.Crt_explan .ex_1 h1 {
+    font-size: 40px;
+    margin-left: 70px;
+    padding-top: 40px;
+}
+
+.Crt_explan .ex_1 p {
+    display: block;
+    width: 350px;
+    font-size: 25px;
+    text-align: left;
+    padding-top: 2px;
+    margin-left: 84px;
+}
+
+
+/* Skills section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Skills {
+    position: relative;
+    width: 100%;
+}
+
+#Skills::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img2.jpg);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(3.5px); 
+    -moz-filter: blur(3.5px); 
+    -o-filter: blur(3.5px); 
+    -ms-filter: blur(3.5px); 
+    filter: blur(3.5px);
+}
+
+.wrapper .Skills_area {
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+    font-family: 'Pretendard-Regular';
+}
+
+.Skills_area .Emt {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    background-image: url(img/layout.png);
+    background-repeat: no-repeat;
+    background-size: 402px 629px;
+    background-position: 0 50px;
+    transition: 0.3s all;
+}
+
+.Skills_area .Elemental_attack {
+    margin-top: 180px;
+    margin-left: 40px;
+}
+
+.Skills_area .Elemental_skill {
+    margin-top: 180px;
+    margin-left: 480px;
+}
+
+.Skills_area .Elemental_burst {
+    margin-top: 180px;
+    margin-left: 920px;
+}
+
+.Skills_area .Emt:hover {
+    transition: 0.5s all;
+    margin-top: 160px;
+    background-color: rgb(255, 255, 255, 0.85);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.75);
+}
+
+.Ea_img img {
+    width: 400px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.Emt h1 {
+    font-size: 24px;
+    color: rgb(218, 68, 118);
+    font-family: 'KOTRA_BOLD-Bold';
+}
+
+.Emt p {
+    font-size: 16px;
+    padding-top: 50px;
+}
+
+
+/* Constellations section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Constellations {
+    position: relative;
+    width: 100%;
+}
+
+#Constellations::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img7.jpg);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(1.5px); 
+    -moz-filter: blur(1.5px); 
+    -o-filter: blur(1.5px); 
+    -ms-filter: blur(1.5px); 
+    filter: blur(1.5px);
+}
+
+.wrapper .Constellations_area {
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.Constellations_area .Cst {
+    position: relative;
+}
+
+.Cst h1 {
+    position: absolute;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.Cst h1:hover {
+    color: #9cdee7;
+    text-shadow: 0 0 #000, 0 4px #000, 4px 4px #000, 0 0 #000;
+}
+
+.Cst .Csth1 {
+    margin-top: 131px;
+    right: 110px;
+}
+
+.Cst .Csth2 {
+    margin-top: 261px;
+    right: 140px;
+}
+
+.Cst .Csth3 {
+    margin-top: 391px;
+    right: 5px;
+}
+
+.Cst .Csth4 {
+    margin-top: 521px;
+    right: 150px;
+}
+
+.Cst .Csth5 {
+    margin-top: 651px;
+    right: 180px;
+}
+
+.Cst .Csth6 {
+    margin-top: 781px;
+    right: 225px;
+}
+
+.Cst_box_one {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    border-radius: 50%;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Cst_box_one:hover {
+    box-shadow: 0px 10px 20px 0px rgba(40, 212, 255, 0.65);
+    filter: brightness(130%);
+    transition: 0.3s all;
+}
+
+.Cst .Cbo1 {
+    background-image: url(img/Cst_Cbo1f.png);
+    right: 400px;
+    margin-top: 100px;
+}
+
+.Cst .Cbo2 {
+    background-image: url(img/Cst_Cbo2f.png);
+    right: 340px;
+    margin-top: 230px;
+}
+
+.Cst .Cbo3 {
+    background-image: url(img/Cst_Cbo3f.png);
+    right: 280px;
+    margin-top: 360px;
+}
+
+.Cst .Cbo4 {
+    background-image: url(img/Cst_Cbo4f.png);
+    right: 280px;
+    margin-top: 490px;
+}
+
+.Cst .Cbo5 {
+    background-image: url(img/Cst_Cbo5f.png);
+    right: 340px;
+    margin-top: 620px;
+}
+
+.Cst .Cbo6 {
+    background-image: url(img/Cst_Cbo6f.png);
+    right: 400px;
+    margin-top: 750px;
+}
+
+.Cst_box_square {
+    display: none;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-size: 600px 600px;
+    margin-left: 100px;
+    margin-top: 175px;
+}
+
+.Cst_box_square p {
+    width: 500px;
+    font-size: 18px;
+    color: white;
+    margin-left: 50px;
+    padding-top: 26px;
+}
+
+.Cst .Cbs2 p {
+    padding-top: 42px;
+}
+
+.Cst .Cbs5 p, .Cst .Cbs3 p {
+    padding-top: 58px;
+}
+
+.Cst:hover .Cst_box_square {
+    display: block;
+    transition: 0.5s all;
+}
+
+.Cst .Cbs1 {
+    background-image: url(img/screenshot_m1.gif);
+}
+
+.Cst .Cbs2 {
+    background-image: url(img/screenshot_m2.gif);
+}
+
+.Cst .Cbs3 {
+    background-image: url(img/screenshot_m3.gif);
+}
+
+.Cst .Cbs4 {
+    background-image: url(img/screenshot_m4.gif);
+}
+
+.Cst .Cbs5 {
+    background-image: url(img/screenshot_m5.gif);
+}
+
+.Cst .Cbs6 {
+    background-image: url(img/screenshot_m6.gif);
+}
+
+
+/* Weapon section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Weapon {
+    position: relative;
+    width: 100%;
+}
+
+#Weapon::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img4.png);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(1.5px); 
+    -moz-filter: blur(1.5px); 
+    -o-filter: blur(1.5px); 
+    -ms-filter: blur(1.5px); 
+    filter: blur(1.5px);
+}
+
+.wrapper .Weapon_area {
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.wrapper .Weapon_area img {
+    float: left;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 190px;
+    transition: 1s;
+}
+
+.Weapon_area .wimg {
+    opacity: 0;
+}
+
+.Weapon_area .wimg1 {
+    transform: translateX(-250px);
+}
+
+.Weapon_area .wimg2 {
+    transform: translateY(-250px);
+}
+
+.Weapon_area .wimg3 {
+    transform: translateX(250px);
+}
+
+.Weapon_show .wimg {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+}
+
+.wrapper .Weapon_area img:hover {
+    margin-top: 170px;
+    transition: 0.5s all;
+}
+
+
+/* Artifacts section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Artifacts {
+    position: relative;
+    width: 100%;
+}
+
+#Artifacts::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img5.png);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(1.5px); 
+    -moz-filter: blur(1.5px); 
+    -o-filter: blur(1.5px); 
+    -ms-filter: blur(1.5px); 
+    filter: blur(1.5px);
+}
+
+.wrapper .Artifacts_area {
+    width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Artifacts_area .afa_Layout {
+    position: absolute;
+    z-index: 1;
+    width: 1200px;
+    height: 560px;
+    background-image: url(img/layout2.png);
+    background-repeat: no-repeat;
+    background-size: 1200px 560px;
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+.Artifacts_area .afa_white {
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+.afa_white img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.afa_white h1 {
+    color: #36a1d6;
+    
+}
+
+.afa_white p {
+    font-family: 'Pretendard-Regular';
+}
+
+
+/* Party section~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#Party {
+    position: relative;
+    width: 100%;
+}
+
+#Party::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/background_img6.jpg);
+    background-color: transparent;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(1.5px); 
+    -moz-filter: blur(1.5px); 
+    -o-filter: blur(1.5px); 
+    -ms-filter: blur(1.5px); 
+    filter: blur(1.5px);
+}
+
+.wrapper .Party_area {
+    width: 1400px;
+    margin: 0 auto;
+    
+}
+
+.Party_area .Party_area2 {
+    position: relative;
+    height: 100%;
+    color: #000;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    margin-top: 200px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.swiper-slide h1 {
+    width: 100%;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.75);
+    background-image: url(./img/partyname.png);
+    background-size: 100% 40px;
+}
+
+/* arrow Line~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.arrow-up {
+    position: fixed;
+    bottom: 60px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(70, 70, 70);
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: .3s
+}
+
+.arrow-up span {
+    font-size: 50px;
+}
+
+.arrow-up.show {
+    opacity: 1;
+}

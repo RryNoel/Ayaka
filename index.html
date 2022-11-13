@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="btns">
+        <div class="container">
+            <a class="Logo" href="./index.html"><img src="img/Logo.png" alt="" class="Logo"></a>
+            <div class="btns_menu">
+                <button class="btn Summary">개요</button>
+                <button class="btn Skills">특성</button>
+                <button class="btn Constellations">별자리</button>
+                <button class="btn Weapon">무기</button>
+                <button class="btn Artifacts">성유물</button>
+                <button class="btn Party">파티</button>
+            </div>
+        </div>
+    </div>
+    <section id="Summary">
+        <div class="wrapper">
+            <div class="Summary_area">
+                <div class="Crt_img Crt_XP"></div>
+                <div class="Crt_video">
+                    <a id="open" onclick="c();">
+                        <img 
+                            class="video-banner-img" 
+                            src="img/section1_crvideo.png" 
+                            alt="" 
+                        />
+                    </a>
+                    <div class="Crt_modal Crt_hidden" onclick="c2();">
+                        <div class="modal_overlay"></div>
+                        <div class="modal_content">
+                            <iframe 
+                                id="youtube"
+                                width="840" 
+                                height="473" 
+                                src="" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                            <button class="button">×</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Crt_explan Crt_XP">
+                    <div class="ex_1">
+                        <h1>눈꽃의 백로, <br> 카미사토 아야카</h1>
+                        <p>이나즈마의 '야시로 봉행' 카미사토 가문의 아가씨,
+                            단아하고 지혜로우며 강인하다. <br>
+                            <br>
+                            사람을 대할 때, 진솔하고 예의 있어 이나즈마 사람들에게
+                            '백로공주'라는 호칭으로 불린다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Skills">
+        <div class="wrapper">
+            <div class="Skills_area">
+                <div class="Emt Elemental_attack">
+                    <div class="Ea_img">
+                        <img src="img/Ayaka_At.gif" alt="">
+                    </div>
+                    <h1>일반 공격 · 카미사토류 · 경(傾)</h1>
+                    <p><b style="color: rgb(129, 13, 58);">일반 공격</b> <br>
+                        검으로 최대 5번 공격한다.<br>
+                        <br>
+                        <b style="color: rgb(129, 13, 58);">강공격</b> <br>
+                        일정 스태미나를 소모해 거합 중 <br>
+                        연속으로 검풍을 방출한다.<br>
+                        <br>
+                        <b style="color: rgb(129, 13, 58);">낙하 공격</b> <br>
+                        공중에서 땅을 내려찍어 <br>
+                        경로상의 적을 공격하고 <br>
+                        착지 시 범위 피해를 준다.
+                    </p>
+                </div>
+                <div class="Emt Elemental_skill">
+                    <div class="Ea_img">
+                        <img src="img/Ayaka_Es.gif" alt="">
+                    </div>
+                    <h1>카미사토류 · 얼음꽃</h1>
+                    <p>활짝 핀 얼음꽃을 소환한 뒤,<br>
+                         주위의 적을 공중에 띄워 <br>
+                        <b style="color: rgb(40, 221, 221);">얼음 원소 범위 피해</b>를 준다.<br>
+                        <br>
+                        「맑은 구름과 희미한 달빛이 내린 밤, <br>
+                        집념은 안개와 같아 어지러운 마음 <br>
+                        쓸쓸히 먼 곳을 바라보네」
+                    </p>
+                </div>
+                <div class="Emt Elemental_burst">
+                    <div class="Ea_img">
+                        <img src="img/Ayaka_Eb.gif" alt="">
+                    </div>
+                    <h1>카미사토류 · 멸망의 서리</h1>
+                    <p>독특한 자태로 차가운 서리를 모아 <br>
+                        앞으로 나아가는 서리의 관문을 방출한다.<br>
+                        <br>
+                        <b style="color: rgb(129, 13, 58);">서리의 관문</b><br>
+                        · 칼날처럼 날카로운 서리 바람으로 지속해서 <br>
+                         접촉한 적을 베어 <b style="color: rgb(40, 221, 221);">얼음 원소 피해</b>를 준다.<br>
+                        · 지속 시간이 끝나면 피어나 <b style="color: rgb(40, 221, 221);">얼음 원소 범위 피해</b>를 준다.<br>
+                        <br>
+                        「흩날리는 눈발이 백로를 적시면, <br>
+                        그리움은 서리처럼 쌓이고<br> 
+                        마음속엔 안타까움만 가득하네」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Constellations">
+        <div class="wrapper">
+            <div class="Constellations_area">
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo1"></div>
+                    <h1 class="Csth1">서리에 검게 물든 벚꽃</h1>
+                    <div class="Cst_box_square Cbs1">
+                        <p>카미사토 아야카의 일반 공격 혹은 강공격이<br>
+                            적에게 <b style="color: aqua;">얼음 원소 피해</b>를 주면, 50%의 확률로<br>
+                            <b style="color: rgb(248, 248, 68);">카미사토류 · 얼음꽃</b>의 재사용 대기시간이 0.3초 감소한다.<br>
+                            해당 효과는 0.1초마다 1회만 발동한다.</p>
+                    </div>
+                </div>
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo2"></div>
+                    <h1 class="Csth2">삼중 서리 관문</h1>
+                    <div class="Cst_box_square Cbs2">
+                        <p><b style="color: rgb(248, 248, 68);">카미사토류 · 멸망의 서리</b> 발동 시 <br>
+                            추가로 작은 규모의 서리의 관문 2개를 생성해 <br>
+                            각각 기존 <b style="color: rgb(255, 98, 98);">공격력 20%의 피해</b>를 준다.</p>
+                    </div>
+                </div>
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo3"></div>
+                    <h1 class="Csth3">흩날리는 카미후부키</h1>
+                    <div class="Cst_box_square Cbs3">
+                        <p><b style="color: rgb(248, 248, 68);">카미사토류 · 멸망의 서리</b>의 스킬 레벨+3 <br>
+                            최대 Lv.15까지 상승</p>
+                    </div>
+                </div>
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo4"></div>
+                    <h1 class="Csth4">영고성쇠</h1>
+                    <div class="Cst_box_square Cbs4">
+                        <p><b style="color: rgb(248, 248, 68);">카미사토류 · 멸망의 서리</b>로 생성된 <br>
+                            서리의 관문이 가하는 피해를 받은 <br>
+                            적의 <b style="color: rgb(68, 140, 248);">방어력이 30%</b> 감소한다. <br>
+                            지속 시간: 6초.</p>
+                    </div>
+                </div>
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo5"></div>
+                    <h1 class="Csth5">화운종월경</h1>
+                    <div class="Cst_box_square Cbs5">
+                        <p><b style="color: rgb(248, 248, 68);">카미사토류 · 얼음꽃</b>의 스킬 레벨+3 <br>
+                            최대 Lv.15까지 상승</p>
+                    </div>
+                </div>
+                <div class="Cst">
+                    <div class="Cst_box_one Cbo6"></div>
+                    <h1 class="Csth6">물에 비친 달</h1>
+                    <div class="Cst_box_square Cbs6">
+                        <p>카미사토 아야카가 10초마다 「살얼음의 춤」 상태를 <br>
+                            획득해 강공격으로 <b style="color: rgb(255, 98, 98);">가하는 피해가 298% 증가</b>한다. <br>
+                            살얼음의 춤 효과는 강공격이 적을 명중하고 <br>
+                            0.5초 후에 사라지며 다시 카운트 다운이 시작된다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Weapon">
+        <div class="wrapper">
+            <div class="Weapon_area">
+                <img class="wimg1 wimg" src="img/weapon_tag11.png" alt="">
+                <img class="wimg2 wimg" src="img/weapon_tag22.png" alt="">
+                <img class="wimg3 wimg" src="img/weapon_tag33.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="Artifacts">
+        <div class="wrapper">
+            <div class="Artifacts_area">
+                <div class="afa_white">
+                    <img src="img/Artifacts.png" alt="">
+                    <h1>얼음 바람 속에서 길잃은 용사</h1>
+                    <p> <b style="color: rgb(129, 13, 58);">- 2세트</b><br>
+                        얼음 원소 피해 보너스 +15% <br>
+                        <br>
+                        <b style="color: rgb(129, 13, 58);">- 4세트</b> <br>
+                        얼음 원소의 영향을 받은 적을 공격 시 치명타 확률이 20% 증가한다. <br>
+                        만약 적이 빙결 상태라면 치명타 확률이 추가로 20% 증가한다.</p>
+                </div>
+                <div class="afa_Layout">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Party">
+        <div class="wrapper">
+            <div class="Party_area">
+                <div class="Party_area2">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/swiper1.png">
+                            <h1>카즈하</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper2.png">
+                            <h1>신학</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper3.png">
+                            <h1>감우</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper4.png">
+                            <h1>야란</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper5.png">
+                            <h1>행추</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper6.png">
+                            <h1>모나</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper7.png">
+                            <h1>바바라</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper8.png">
+                            <h1>디오나</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper9.png">
+                            <h1>베넷</h1>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/swiper10.png">
+                            <h1>종려</h1>
+                        </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="arrow-up">
+        <span class="material-icons">
+            arrow_upward
+        </span>
+    </button>
+</body>
+</html>
